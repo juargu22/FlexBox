@@ -1,0 +1,45 @@
+/*-----------------/
+|----- FOOTER ----
+\-------------------*/
+
+#footer{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  height: 120px;
+  align-items: center;
+  border-top: 2px solid $color-gris;
+
+  .logo{
+    flex-basis: auto;
+    order: 2;
+    flex-grow: 1;
+    font-size: 3em;
+    font-weight: bold;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0px $color-gris;
+    text-align: right;
+    margin-right: 20px;
+
+    @media (max-width: 695px){
+      text-align: center;
+      order: 1;
+    }
+  }
+
+  .info{
+    flex-grow: 1;
+    order: 1;
+    margin-left: 20px;
+
+
+    @media (max-width: 695px){
+      text-align: center;
+      flex-basis: 100%;
+      order: 2;
+    }
+  }
+
+}

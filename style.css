@@ -1,0 +1,258 @@
+/*-----------------/
+|-----variables ----
+\-------------------*/
+/*-------------------/
+|    MIXINS
+\*------------------*/
+/*-------------------/
+|  generales
+ \*------------------*/
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  list-style: none;
+  color: #212F3D;
+}
+
+.container {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px #ccc;
+  min-height: 600px;
+}
+
+a {
+  display: block;
+  line-height: 100%;
+}
+
+/*-----------------/
+|----- HEADER ----
+\-------------------*/
+#header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 120px;
+  border-bottom: 2px solid #ccc;
+}
+@media (max-width: 1002px) {
+  #header {
+    text-align: center;
+  }
+}
+
+.logo {
+  flex-grow: 1;
+  flex-basis: 50%;
+  padding-left: 20px;
+}
+.logo h1 {
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #ccc;
+}
+@media (max-width: 455px) {
+  .logo h1 {
+    font-size: 2em;
+    margin-top: 20px;
+  }
+}
+
+.menu {
+  flex-grow: 1;
+  flex-basis: 45%;
+  height: 100%;
+  padding-right: 20px;
+}
+.menu ul {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1002px) {
+  .menu ul {
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 455px) {
+  .menu ul {
+    flex-wrap: wrap;
+    height: auto;
+  }
+}
+.menu a {
+  padding: 15px;
+  transition: all 500ms;
+}
+.menu a:hover {
+  color: #D35400;
+  text-decoration: underline;
+}
+
+/*-----------------/
+|----- CONTENT ----
+ \-------------------*/
+#content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (max-width: 700px) {
+  #content {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 80%;
+  margin-left: 20px;
+}
+@media (max-width: 700px) {
+  #projects {
+    flex-basis: 100%;
+  }
+}
+
+.project {
+  flex-grow: 1;
+  flex-basis: 250px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.project:hover a {
+  color: #D35400;
+  cursor: pointer;
+}
+.project img {
+  width: 100%;
+}
+.project .info {
+  padding: 10px;
+}
+.project a {
+  font-size: 1em;
+  transition: all 0.3s;
+  font-weight: bold;
+}
+.project a:hover {
+  color: #D35400;
+}
+
+/*-----------------/
+|----- ASIDE ----
+\-------------------*/
+#aside {
+  flex-basis: 15%;
+  margin-left: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (max-width: 700px) {
+  #aside {
+    margin-left: 0;
+  }
+}
+#aside h2 {
+  display: block;
+  width: 100%;
+  font-size: 1.3em;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+@media (max-width: 700px) {
+  #aside ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 20px;
+  }
+}
+#aside li {
+  padding-bottom: 20px;
+}
+#aside li:hover a {
+  color: #fff;
+  background-color: #212F3D;
+}
+@media (max-width: 700px) {
+  #aside li {
+    flex-grow: 1;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+#aside a {
+  text-align: center;
+  padding: 20px;
+  background-color: #ccc;
+  transition: all 0.3s;
+  text-transform: uppercase;
+}
+
+/*-----------------/
+|----- FOOTER ----
+\-------------------*/
+#footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  height: 120px;
+  align-items: center;
+  border-top: 2px solid #ccc;
+}
+#footer .logo {
+  flex-basis: auto;
+  order: 2;
+  flex-grow: 1;
+  font-size: 3em;
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px #ccc;
+  text-align: right;
+  margin-right: 20px;
+}
+@media (max-width: 695px) {
+  #footer .logo {
+    text-align: center;
+    order: 1;
+  }
+}
+#footer .info {
+  flex-grow: 1;
+  order: 1;
+  margin-left: 20px;
+}
+@media (max-width: 695px) {
+  #footer .info {
+    text-align: center;
+    flex-basis: 100%;
+    order: 2;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,7 @@
+/*-------------------/
+|    MIXINS
+\*------------------*/
+
+@mixin border-bottom($width, $color-border) {
+  border-bottom: $width solid $color-border;
+}

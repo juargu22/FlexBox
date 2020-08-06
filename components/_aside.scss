@@ -1,0 +1,60 @@
+/*-----------------/
+|----- ASIDE ----
+\-------------------*/
+
+#aside{
+  flex-basis: 15%;
+  margin-left: 20px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (max-width: 700px){
+    margin-left: 0;
+  }
+
+  h2{
+    display: block;
+    width: 100%;
+    font-size: 1.3em;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    @include border-bottom(1px, $color-gris);
+  }
+
+  ul{
+    @media (max-width: 700px){
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin: 20px;
+    }
+  }
+
+  li{
+    padding-bottom: 20px;
+
+    &:hover a{
+      color: $color-wt;
+      background-color: $color-letra;
+    }
+
+    @media (max-width: 700px){
+      flex-grow: 1;
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  a{
+    text-align: center;
+    padding: 20px;
+    background-color: $color-gris;
+    transition: all .3s;
+    text-transform: uppercase;
+  }
+
+
+}

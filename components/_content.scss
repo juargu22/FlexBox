@@ -1,0 +1,59 @@
+ /*-----------------/
+|----- CONTENT ----
+ \-------------------*/
+
+#content{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (max-width: 700px){
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+
+#projects{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  flex-basis: 80%;
+  margin-left: 20px;
+
+  @media (max-width: 700px){
+    flex-basis: 100%;
+  }
+}
+
+.project{
+  flex-grow: 1;
+  flex-basis:  250px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  @include border-bottom(1px, $color-gris);
+  text-align: center;
+
+  &:hover a{
+    color: $color-hover;
+    cursor: pointer;
+  }
+
+  img{
+    width: 100%;
+  }
+  .info{
+    padding: 10px;
+  }
+  a{
+    font-size: 1em;
+    transition: all .3s;
+    font-weight: bold;
+
+    &:hover{
+      color: $color-hover;
+    }
+  }
+
+
+}
